@@ -1,0 +1,471 @@
+h1{
+    color: white;
+     text-decoration-line: underline;/*Subrayar*/
+    text-decoration-style: dashed;  
+     text-shadow: 1px 2px 6px #808080;
+  margin: -5px;
+    background-color: #4B0082;
+    border: 5px solid black;
+    opacity: 0.6;
+  }
+  .texto {
+    text-align: center;
+  }
+  
+  @keyframes name {
+    0% {opacity: 1;}
+    50% {opacity: 0;}
+    100% {opacity: 1;}
+  }
+  
+  .texto p {
+    animation: name 7s infinite; 
+  }
+  
+  
+  body
+  {
+    margin: 0;
+    padding: 0;
+    width: 1000px;
+    height: 1000px;
+    box-sizing: border-box;
+    background-image:url("https://media.istockphoto.com/id/1223239593/es/vector/paisaje-vectorial-con-pantano-en-bosque-nocturno.jpg?s=612x612&w=0&k=20&c=7adtyIMXdPhs7uFzWKa6v5Byt8uDt0VNLFxNRH1Ck3M=")
+  }
+  .container /*Contenido*/
+  {
+    width: -50px;
+    height: 800px;
+    margin: 20px auto auto auto;
+  
+    .container{
+  animation-name: buho;
+    animation-duration:10s ;
+    position:relative;
+    animation-direction: resverse;
+    animation-timing-function:sticky;
+  }
+  @keyframes buho{
+    0%{left:0px; top:0px;}
+    25%{left:600px; top:0px;}
+    50%{left:500px; top:500px;}
+    75%{left:0px; top:600px;}
+    100%{left:0px; top:600px;}
+  }
+  }
+  .body/*Cuerpo*/
+  {
+    position: relative;
+    left: 12%;
+    top: 15%;
+    bottom: 50;
+    right: 100;
+    width: 320px;
+    height: 420px;
+    background: #CD853F;
+    border-radius: 130px;
+  }
+  .container{
+  animation-name: buho;
+    animation-duration:5s;
+    position:relative;
+    animation-direction: resverse;
+    animation-timing-function:sticky;
+  }
+  @keyframes buho{
+    0%{left:0px; top:0px;}
+    25%{left:200px; top:0px;}
+    50%{left:200px; top:200px;}
+    75%{left:0px; top:300px;}
+    100%{left:0px; top:300px;}
+  }
+  .ear/*Oreja*/
+  {
+    position: absolute;
+    background:#CD853F;
+    top: -10px;
+    width: 125px;
+    height: 190px;
+  }
+  .ear:nth-child(1)
+  {
+    border-radius: 100% 0% 100% 0%;
+    transform: rotate(-50deg);
+    left: 0;
+  }
+  .ear:nth-child(2)
+  {
+    border-radius: 0% 100% 0% 0%;
+    transform: rotate(50deg);
+    right: 0;
+  }
+  .eyesContainer /*Contenedor de ojos*/
+  {
+    position: absolute;
+    top: 45px;
+    width: 180px;
+    height: 180px;
+    background: #8B4513;
+    border-radius: 50%;
+  }
+  .eyesContainer:nth-child(3)
+  {
+    left: 0px;
+  }
+  .eyesContainer:nth-child(4)
+  {
+    right: 0px;
+  }
+  .eyesContainer::before
+  {
+    content: '';
+    position: absolute;
+    width: 125px;
+    height: 125px;
+    top: 20px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  .eyesContainer:nth-child(3)::before
+  {
+left: 5px;
+  }
+  .eyesContainer:nth-child(4)::before
+  {
+    right: 15px;
+  }
+  .eyesContainer::after
+  {
+    content: '';
+    position: absolute;
+    top: 40px;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #000000;
+    z-index: 2;
+   animation-name: eyesrot;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+  }
+  
+    @keyframes eyesrot{
+      from{transform:translatex(0px) translatey(5px);}
+      25%{transform: translatex(0px);}
+      26%{transform: translatex(10px) translatex(5px);}
+      40%{transform:translatex (10px);}
+    }
+  
+  .eyesContainer:nth-child(3)::after
+  {
+    left: 35px;
+  }
+  .eyesContainer:nth-child(4)::after
+  {
+    right: 35px;
+  }
+  .pupil/*Pupilas*/
+  {
+    position: absolute;
+    top: 60px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #fff;
+    z-index: 5;
+    
+  }
+  .eyesContainer:nth-child(3) .pupil
+  {
+    left: 50px;
+  }
+  .eyesContainer:nth-child(4) .pupil
+  {
+    right: 80px;
+  }
+  
+  .mouth/*Boca*/
+  {
+    position: absolute;
+    top: 190px;
+    left: 130px;
+    width: 50px;
+    height: 50px;
+    background: #F99525;
+    clip-path: polygon(50% 100%, 0 0, 100% 0);
+  }
+  .belly/*Barriga*/
+  {
+    position: absolute;
+    top: 255px;
+    right: 29px;
+    border-radius: 50%;
+    width: 253px;
+    height: 166px;
+    background: #DEB887 ;
+    clip-path: circle(52.8% at 50% 54%);
+  }
+  .pens /*Plumas*/
+  {
+    position: absolute;
+    top: 30px;
+    width: 52px;
+    height: 30px;
+    border-radius: 50%;
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid #000000;
+  }
+  .pens:nth-child(1)
+  {
+    left: 60px;
+  }
+  .pens:nth-child(2)
+  {
+    left: 140px;
+  }
+  .pens:nth-child(3)
+  {
+    top: 60px;
+    left: 25px;
+  }
+  .pens:nth-child(4)
+  {
+    top: 60px;
+    left: 100px;
+  }
+  .pens:nth-child(5)
+  {
+    top: 60px;
+    left: 180px;
+  }
+  .pens:nth-child(6)
+  {
+    top: 90px;
+    left: 60px;
+  }
+  .pens:nth-child(7)
+  {
+    top: 90px;
+    left: 150px;
+  }
+  .at /*Alas*/
+  {
+    position: absolute;
+    top: 210px;
+    width: 100px;
+    height: 120px;
+    left: -55px;
+    border-radius: 50% 50% 0px 0px;
+    background: #8B4513;
+    z-index: 5;
+    animation-name: rotar;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    display: inline-block;
+  }
+  
+    @keyframes rotar{
+      
+      from{
+        transform:rotate(60deg);
+      }to{
+        transform: rotate(30deg);
+      }
+    }
+  
+  
+  .at:nth-child(6)
+  {
+    transform: rotate(100deg);
+  }
+  .at:nth-child(8)
+  {
+    transform: rotate(0deg);
+    left: 265px;
+  }
+  .ats
+  
+  {
+    position: absolute;
+    top: 119px;
+    width: 35px;
+    height: 60px;
+    background: #4A3520;
+    border-radius: 0% 0% 50% 50%;
+  }
+  .ats:nth-child(1)
+  {
+    left: 32px;
+  }
+  .ats:nth-child(2)
+  {
+    left: 65px;
+  }
+  
+  .legs 
+  {
+    position: absolute;
+    top: 350px;
+    width: 20px;
+    height: 80px;
+    background: #F99525;
+    z-index: -1;
+  
+  }
+  
+  .legs:nth-child(9)
+  
+  {
+  
+    left: 110px;
+  
+  }
+  
+  .legs:nth-child(10)
+  
+  {
+  
+    right: 110px;
+  
+  }
+  
+  .hoof
+  
+  {
+  
+    position: absolute;
+  
+    top: 80px;
+  
+    width: 8px;
+  
+    height: 18px;
+  
+    background: #F99525;
+  
+  }
+  
+  .hoof:nth-child(1)
+  
+  {
+  
+    top: 77px;
+  
+    left: -5px;
+  
+    transform: rotate(50deg);
+  
+  }
+  
+  .hoof:nth-child(2)
+  
+  {
+  
+    left: 6px;
+  
+  }
+  
+  .hoof:nth-child(3)
+  
+  {
+  
+    top: 77px;
+  
+    left: 17px;
+  
+    transform: rotate(-50deg);
+  
+  }
+  
+  .petal1{
+    width:20px;
+    height:80px;
+    border-radius:100%;
+    background:#DDA0DD;  
+    Position:relative;
+    margin: auto;
+   bottom: 680px;
+    left: -120px;
+    border: 1px #000000;
+    border-style: solid;  
+    }
+  .petal2{
+    width:20px;
+    height:80px;
+    border-radius:100%;
+    background:#DDA0DD;  Position:relative;
+    margin: auto;
+   bottom: 760px;
+    left: -120px;
+    border: 1px #000000;
+    border-style: solid;
+    }
+  .petal3{
+    width:20px;
+    height:85px;
+    border-radius:100%;
+    background:#800080;  
+    Position:relative;
+    margin: auto;
+   bottom: 845px;
+    left: -120px;
+    border: 1px #000000;
+    border-style: solid;
+    transform: rotate(50deg);
+      
+    }
+  .petal4{
+    width:20px;
+    height:85px;
+    border-radius:100%;
+    background:#800080;  
+    Position:relative;
+    margin: auto;
+   bottom: 935px;
+    left: -125px;
+    border: 1px #000000;
+    border-style: solid;
+    transform: rotate(-43deg);
+    animation-name: flor;
+    animation-duration: 6s;
+  }
+    @keyframes flor{
+      0% {background:#DDA0DD;}
+      100% {background:#800080;}
+      
+    }
+  .petal5{
+    width:30px;
+    height:30px;
+    border-radius:100%;
+    background:#FFFF00;  Position:relative;
+    margin: auto;
+   bottom: 993px;
+    left: -120px;
+    border: 1px #000000;
+    border-style: solid;
+    animation-name: flor;
+    animation-duration: 5s;
+  }
+    @keyframes flor{
+     0% {background:#DDA0DD;}
+      100% {background:#800080;}
+  }
+  .flower{
+  animation-name: bu;
+    animation-duration:5s;
+    position:relative;
+    animation-direction: resverse;
+    animation-timing-function:sticky;
+  }
+  @keyframes bu{
+    0%{left:0px; top:0px;}
+    25%{left:200px; top:0px;}
+    50%{left:200px; top:200px;}
+    75%{left:0px; top:300px;}
+    100%{left:0px; top:300px;}
+  }
